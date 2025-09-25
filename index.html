@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Brew</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+
+        <div class="navbar">
+
+             <div class="logo"> 
+
+                   <img src="n.png" alt="Coffee Shop Logo" class="logotitle">
+                   <h1 class="title">Ur<span class="highlight">ban B</span>rew</h1>
+                   <img src="a.png" alt="coffee shop logo" class="logoimg">
+             </div> 
+
+             <ul class="nav-links">
+                     <li><a href="#hero">home</a></li>
+                     <li><a href="#menu">menu</a></li>
+                     <li><a href="#about">about</a></li>
+                     <li><a href="#contact">contact</a></li>
+             </ul>
+
+          </div> 
+
+
+
+<script>
+  const links = document.querySelectorAll('.nav-links li a');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+
+      links.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+          
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+     </header>
+
+       <div class="hero" id="home">
+
+           <div class="content">
+               <h2>Wake up with a perfect cup</h2>
+               <h3>Where every cup tells a story</h3>
+           </div>
+
+
+            <div class="pic">
+                <img src="D.png" alt="shop pic" class="coffeepic">
+            </div>
+
+       </div>
+
+
+
+<div class="btn-container">
+  <button class="coffee-btn" onclick="scrollToMenu()">☕ Explore Our Menu</button>
+</div>
+
+<script>
+  function scrollToMenu() {
+    document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+          
+<section class="menu" id="menu">
+  <h2 class="menu-title">Urban Brew Menu</h2>
+  <div class="menu-items">
+
+    
+    <div class="menu-card">
+      <img src="espresso.png" alt="Espresso">
+      <h3>Espresso</h3>
+      <p class="price">$2.50</p>
+      <p>Rich & bold shot of coffee.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="americano.png" alt="Americano">
+      <h3>Americano</h3>
+      <p class="price">$3.00</p>
+      <p>Espresso with hot water, smooth & light.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="capuccino.png" alt="Cappuccino">
+      <h3>Cappuccino</h3>
+      <p class="price">$3.50</p>
+      <p>Espresso, steamed milk & foam.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="latte.png" alt="Latte">
+      <h3>Latte</h3>
+      <p class="price">$4.00</p>
+      <p>Smooth & creamy with steamed milk.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="flat white.png" alt="Flat White">
+      <h3>Flat White</h3>
+      <p class="price">$4.00</p>
+      <p>Espresso with velvety microfoam.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="mocha.png" alt="Mocha">
+      <h3>Mocha</h3>
+      <p class="price">$4.50</p>
+      <p>Espresso blended with chocolate & milk.</p>
+    </div>
+
+    
+    <div class="menu-card">
+      <img src="cold brew.png" alt="Cold Brew">
+      <h3>Cold Brew</h3>
+      <p class="price">$4.00</p>
+      <p>Slow-brewed for a chilled, refreshing taste.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="nitro.png" alt="Nitro Cold Brew">
+      <h3>Nitro Cold Brew</h3>
+      <p class="price">$5.00</p>
+      <p>Infused with nitrogen for a creamy finish.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="tonic.png" alt="Espresso Tonic">
+      <h3>Espresso Tonic</h3>
+      <p class="price">$4.50</p>
+      <p>A bold mix of espresso & tonic water.</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="affo.png" alt="Affogato">
+      <h3>Affogato</h3>
+      <p class="price">$5.50</p>
+      <p>Espresso poured over vanilla ice cream.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Have a question or want to say hi? Send us a message!</p>
+
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="number" placeholder="your Number" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Success message popup -->
+  <div class="success-message" id="successMessage">
+    <p>✅ Your message has been sent! Thank you for reaching out.</p>
+    <span id="closeMessage">&times;</span>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>
+    At <strong>Urban Brew</strong>, every cup tells a story.  
+    We carefully source our beans from the finest farms, roast them with passion,  
+    and brew them with love. Our cozy shop is the perfect place to relax, connect,  
+    and enjoy the rich aroma of freshly brewed coffee.
+  </p>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Urban Brew</h3>
+    <p>Serving happiness in every cup since 2025.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+    </ul>
+    <p class="copy">&copy; 2025 Urban Brew | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+  const closeMessage = document.getElementById("closeMessage");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent actual form submission
+    successMessage.style.display = "block"; // show popup
+    form.reset(); // reset the form fields
+  });
+
+  // Close the popup when clicking the X
+  closeMessage.addEventListener("click", function() {
+    successMessage.style.display = "none";
+  });
+
+  // Optional: auto-hide after 3 seconds
+  form.addEventListener("submit", function() {
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 3000);
+  });
+</script>
+
+<script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Smooth scroll to menu
+    function scrollToMenu() {
+      document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Contact form alert
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for reaching out! We’ll get back to you soon.");
+      this.reset();
+    });
+
+    // Fade-in on scroll effect
+    const faders = document.querySelectorAll(".menu-item, .about, .contact");
+
+    window.addEventListener("scroll", () => {
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    });
+  </script>
+    
+</body>
+</html>
